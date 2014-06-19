@@ -7,7 +7,7 @@ module Tataki
   module Converter
     class SkkJisyo < Base
       DEFAULT_CONFIG_PATH = "../../../../data/skk-jisyo.yml"
-      DEFAULT_JISYO_SUFFIXES = %w[M]
+      DEFAULT_JISYO_SUFFIXES = %w[L]
 
       def initialize(jisyo_types = DEFAULT_JISYO_SUFFIXES)
         @jisyo_paths = jisyo_types.map{|suffix| Skk::Jisyo.path(suffix) }
